@@ -1,0 +1,28 @@
+{
+  "name": "ai-translator",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "vue": "^3.5.21"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/compiler-sfc": "^3.5.21",
+    "@vue/eslint-config-prettier": "^8.0.0",
+    "@vue/runtime-core": "^3.5.21",
+    "@vue/tsconfig": "^0.8.1",
+    "eslint": "^8.45.0",
+    "eslint-plugin-vue": "^9.15.1",
+    "prettier": "^3.0.0",
+    "typescript": "^5.9.2",
+    "vite": "^4.4.5"
+  }
+}

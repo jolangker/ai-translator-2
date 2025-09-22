@@ -1,0 +1,12 @@
+.env
+node_modules/
+dist/
+.vscode/
+.DS_Store
+*.log
+.idea/
+*.local
+.env.*
+/coverage
+*.bak
+*.tmp
