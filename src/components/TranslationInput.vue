@@ -19,11 +19,11 @@
         aria-label="Select target language"
       >
         <option
-          v-for="(name, code) in targetLanguages"
-          :key="code"
-          :value="code"
+          v-for="language in languages"
+          :key="language.code"
+          :value="language.code"
         >
-          {{ name }}
+          {{ language.name }}
         </option>
       </select>
     </div>
@@ -49,6 +49,7 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue';
+import { languages } from '@/data/languages';
 
 const props = defineProps<{
   modelValue: string
@@ -66,21 +67,7 @@ const inputText = computed({
   set: (value: string) => emit('update:modelValue', value)
 });
 
-const selectedTarget = ref('en');
-
-// Simplified language options since language detection is handled by AI
-const targetLanguages = {
-  'en': 'English',
-  'es': 'Spanish',
-  'fr': 'French',
-  'de': 'German',
-  'it': 'Italian',
-  'pt': 'Portuguese',
-  'ru': 'Russian',
-  'ja': 'Japanese',
-  'ko': 'Korean',
-  'zh': 'Chinese'
-};
+const selectedTarget = ref(languages[0].code);
 
 const translateButtonText = computed(() => {
   return props.isTranslating ? 'Translating...' : 'Translate';
